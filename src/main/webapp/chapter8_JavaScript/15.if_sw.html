@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>15.if_sw</title>
+</head>
+<body>
+    <script>
+        let solution = 10;
+        let insertNum = prompt('숫자입력');
+        //0~7 정답보다 작다
+        //13~ 정답보다 크다
+        //8,9,11,12 정답과 가깝다잉
+        //10 정답~
+        if(insertNum==10) {
+            let insertGender = prompt('성별입력');
+            if(insertGender=="male") {
+                alert('male');
+            }else if(insertGender=="female") {
+                alert('female');
+            }else{
+                document.write('잘못된 값입니다.');
+            }
+        }else if(insertNum==8||insertNum==9||insertNum==11||insertNum==12) {
+            alert('정답과 가깝습니다');
+        }else if(insertNum<=7 && insertNum>=0) {
+            alert('정답보다 작습니다');
+        }else if(insertNum>=13) {
+            alert('정답보다 큽니다');
+        }else {
+            document.write('잘못된 값입니다.');
+        }
+    </script>
+</body>
+</html>
+

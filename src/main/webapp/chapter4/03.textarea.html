@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03.textarea</title>
+</head>
+<body>
+	<!-- textareaContent 담기면 post 방식으로 postdata2.jsp 보내죠-->
+	<h2>텍스트 공간 입력</h2>
+	<form action="postdata2.jsp" method="post">
+		<textarea name="textareaContent" cols="50" rows="5">
+			텍스트를 작성하는 공간입니다.
+		</textarea>
+		<br/>
+		<input type="submit" value="전송"/>
+		<input type="reset" value="재전송"/>
+	</form>
+</body>
+</html>

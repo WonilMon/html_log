@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                $('#firstBtn').click(function () {
+                    $('#firstItem').appendTo('#list');
+                });
+                $('#secondBtn').click(function () {
+                    $('#secondItem').appendTo('#list');
+                });
+                $('#thirdBtn').click(function () {
+                    $('#thirdItem').appendTo('#list');
+                });
+            });
+            //appendTo : 선택한 요소를 지정된 다른 요소의 끝에 추가
+        </script>
+    </head>
+    <style></style>
+    <body>
+        <h1>.append()메서드</h1>
+        <ul id="list">
+            <li id="firstItem">상의</li>
+            <li id="secondItem">하의</li>
+            <li id="thirdItem">아우터</li>
+        </ul>
+        <p />
+        <button id="firstBtn">상의 상품이동</button>
+        <button id="secondBtn">하의 상품이동</button>
+        <button id="thirdBtn">아우터 상품이동</button>
+    </body>
+</html>

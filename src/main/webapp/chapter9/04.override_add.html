@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>04.override_add</title>
+    </head>
+    <body>
+        <script>
+            // 이게 젤 깔끔합니다 이거 쓰셈
+            function add() {
+                sum = 0;
+                for (let i = 0; i < arguments.length; i++) {
+                    sum += arguments[i];
+                }
+                document.write('수행결과: ' + sum + '<p />');
+            }
+
+            add(2, 3);
+            add(4, 5);
+            add(6, 7, 8);
+            add(9, 10, 11, 12);
+        </script>
+    </body>
+</html>
+<!--
+arguments : 들어가는 인자들을 배열 처리해주는 개체 !!!
+-->

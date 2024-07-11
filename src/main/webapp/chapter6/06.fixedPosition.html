@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06.fixedPosition</title>
+<style>
+    .p{
+        background-color: yellow;
+        width: 300px;
+        height: 50px;
+    }
+    .fp{ /* 부모에 상관없이 내가 주는 대로 나옴 */
+        position: fixed;
+        right: 5px;
+        top: 5px;
+        background-color: lightgreen;
+        width: 300px;
+        height: 50px;
+    }
+</style>
+</head>
+<body>
+    <p class="p">기본 위치 설정 박스1</p>
+    <p class="p">기본 위치 설정 박스2</p>
+    <p class="p">기본 위치 설정 박스3</p>
+    <p class="p">기본 위치 설정 박스4</p>
+    <p class="p">기본 위치 설정 박스5</p>
+    <!-- 여기까진 포지션이 static이죠 -->
+     <p class="fp">고정 위치 설정 박스</p>
+
+</body>
+</html>

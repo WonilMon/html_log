@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03.display</title>
+<style>
+    p Strong{color: blue;
+        border: 1px dotted red;
+    }
+    .bk strong{ /* block : 줄(위->아래) */
+        display: block;
+        color: blue;
+        border: 1px dotted red;}
+    .in li{ /* inline : 줄(좌->우) */
+        display: inline;
+        border: 1px solid;
+        border-color: blue;}
+</style>
+</head>
+<body>
+    <h3>[인라인 형식]</h3>
+    <p>세계적인  IT 기업에는
+        <strong>Google</strong>
+        <strong>Apple</strong>
+        <strong>Oracle</strong>
+    등이 있습니다.
+    </p>
+    <hr/>
+    <h3>[블록 형식]</h3>
+    <p class="bk">세계적인 IT기업에는
+        <strong>Google</strong>
+        <strong>Apple</strong>
+        <strong>Oracle</strong>
+    등이 있습니다.
+    </p>
+    <hr/>
+    <h4>[인라인 형식]</h4> <!-- 이거 자체가 블록이죠? display 이용해서 인라인으로 -->
+    <ul class="in">
+        <li><a href="#">Goole</a></li>
+        <li><a href="#">Apple</a></li>
+        <li><a href="#">Oracle</a></li>
+    </ul>
+</body>
+</html>

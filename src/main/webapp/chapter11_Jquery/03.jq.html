@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>03.jq</title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            // 모든 요소 잡아오기 #
+            // ready 쓰지 않아도 디폴트라 다 가능 (02.jq.html 파일이랑 비교하면서 봐)
+            $(function() {
+                alert($('#node1').html());
+            })
+        </script>
+    </head>
+    <body>
+        <div id="node1">
+            <table border="1" style="width: 50%;">
+                <tr>
+                    <th>가</th>
+                    <th>나</th>
+                    <th>다</th>
+                    <th rowspan="4">라</th>
+                </tr>
+                <tr>
+                    <td>마</td>
+                    <td colspan="2" rowspan="3">바</td>
+                    
+                </tr>
+                <tr>
+                    <td>사</td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>아</td>
+                </tr>
+                </tr>
+                <tr>
+                    <td colspan="2">자</td>
+                    <td colspan="2">자</td>
+                </tr>
+                </tr>
+                <tr>
+                    <td colspan="4" >카</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

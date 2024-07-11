@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>16.for&while</title>
+</head>
+<body>
+    <script>
+        let x = 0;
+        let sum = 0;
+        for(x=1;x<100;x++) {
+            if(x%3 != 0){
+                continue;
+            }else {
+                sum+=x;
+                document.write(x + " ");
+            }
+        }
+        document.write("<p>")
+        document.write("1~100까지의 수 중 3의 배수 합 : <br>" + sum + "</br>")
+        
+        document.write("</br>");
+
+        x=0;
+        sum=0;
+        while(1) {
+            x+=3;
+            if(x>100) break;
+            sum+=x;
+            document.write(x + " ");
+        }
+        document.write("<p>")
+        document.write("1~100까지의 수 중 3의 배수 합 : <br>" + sum + "</br>")
+
+    </script>
+</body>
+</html>
+

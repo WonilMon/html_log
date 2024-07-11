@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>05.radio</title>
+</head>
+<body>
+	<Form action="getdata2.jsp" method="get">
+		<p>
+			<h3>당신의 성별은 무엇입니까?</h3>
+			<!-- step1. 남성 클릭 시 : value(남성)이 들어감 그리고 제출 시 위의 action으로 보냄 -->
+			<input type="radio" name="gender" value="남성">남자
+			<input type="radio" name="gender" value="여성">여자
+		</p>
+		<p>
+			<h3>당신은 몇 학년입니까?</h3>
+			<input type="radio" name="grade" value="1">1학년
+			<input type="radio" name="grade" value="2">2학년
+			<input type="radio" name="grade" value="3">3학년
+			<input type="radio" name="grade" value="4">4학년
+		</p>
+
+		<input type="submit" value="제출">
+		<input type="reset" value="다시작성">
+	</Form>
+</body>
+</html>

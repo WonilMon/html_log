@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                $('button.p1').click(function () {
+                    $('#firstItem').clone().appendTo('#list');
+                });
+                $('button.p2').click(function () {
+                    $('#lastItem').clone().appendTo('#list');
+                });
+                $('button.p3').click(function () {
+                    $('<b>봄상품80%세일</b>').prependTo('#item');
+                });
+                $('button.p4').click(function () {
+                    $('.content').remove('.second, .third');
+                });
+            });
+            //.appendTo() : 선택한 요소를 지정된 다른 요소의 끝에 추가
+            //.prependTo() : 선택한 요소를 지정된 다른 요소의 처음에 추가
+            //.clone() : 요소 복사
+            //.remove() : 선택한 요소와 그 자식 요소들 제거
+        </script>
+    </head>
+    <style></style>
+    <body>
+        <h1>.clone() 메서드</h1>
+        <ul id="list">
+            <li id="firstItem">상의</li>
+            <li id="item">하의</li>
+            <li id="lastItem">아우터</li>
+            <li class="content second">두번째 컨텐츠</li>
+            <li class="content third">세번째 컨텐츠</li>
+        </ul>
+        <button class="p1">상의 상품 등록</button>
+        <button class="p2">아우터 상품 등록</button>
+        <button class="p3">세일 상품</button>
+        <button class="p4">상품 취소</button>
+    </body>
+</html>

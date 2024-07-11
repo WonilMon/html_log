@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>08.element</title>
+    </head>
+    <body>
+        <p id="d1"></p>
+        <p id="d2"></p>
+        <p id="d3"></p>
+        <p id="d4"></p>
+        <p id="d5"></p>
+        <p id="d6"></p>
+        <p id="d7"></p>
+        <p id="d8"></p>
+        <p id="d9"></p>
+        <p id="d10"></p>
+        <p id="d11"></p>
+
+        <script>
+            // Date() : 현재 날짜와 시간 반환
+            document.getElementById('d1').textContent = new Date();
+            // 1970/1/1부터 초만큼 반환(쓸일X)
+            document.getElementById('d2').textContent = new Date(14429);
+            // 문자열 날짜
+            document.getElementById('d3').textContent = new Date('May 1, 2024 15:04:07');
+
+            document.getElementById('d3').textContent = new Date('May 1, 2024 15:04:07');
+            // 날짜 지정 (년 월 일 시 분 초)
+            document.getElementById('d4').textContent = new Date(2024, 6, 19, 18, 20, 29);
+
+            let today = new Date();
+
+            // getFullYear() : 현재 년도
+            document.getElementById('d5').textContent = today.getFullYear() + '년';
+            // getMonth() : 현재 월-1 (0월부터 시작함) / getDate() : 현재 일
+            document.getElementById('d6').textContent = today.getMonth() + 1 + '월' + today.getDate() + '일';
+            // today.getHours() : 시 / today.getMinutes : 분 / today.getSeconds : 초
+            document.getElementById('d7').textContent =
+                today.getHours() + '시' + today.getMinutes() + '분' + today.getSeconds() + '초';
+            // today.getTime() : 1970/1/1 자정 이후 밀리 초 반환(쓸일X)
+            document.getElementById('d8').textContent = today.getTime();
+            // toLocaleDateString() : 날짜만 문자열로 변환
+            document.getElementById('d9').textContent = today.toLocaleDateString();
+            // toLocaleTimeString() : 시간만 문자열로 변환
+            document.getElementById('d10').textContent = today.toLocaleTimeString();
+            // toLocaleString() : 날짜와 시간 문자열로 변환
+            document.getElementById('d11').textContent = today.toLocaleString();
+        </script>
+    </body>
+</html>

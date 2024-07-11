@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                let data;
+                $('#detachBtn').click(function () {
+                    data = $('.content').detach();
+                });
+
+                $('#restorBtn').click(function () {
+                    $('container').append(data);
+                });
+            });
+
+            //.detach() : 선택한 요소 제거
+        </script>
+    </head>
+    <style></style>
+    <body>
+        <h1>.detath()메서드</h1>
+        <div class="container">
+            <div>첫번째 컨텐츠</div>
+            <div class="content second">두번째 컨텐츠</div>
+            <div class="content third">세번째 컨텐츠</div>
+        </div>
+
+        <button id="detachBtn">상품 취소</button>
+        <button id="restorBtn">상품 복구</button>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>12.animation2</title>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative; /* static이 아닌 relative로 해서 동적으로 */
+        animation: boxmove 5s linear infinite alternate;
+    }
+
+    .box1{animation-delay: 3s;}
+    .box2{animation-delay: 5s;}
+
+    @keyframes boxmove{
+        from{left:0px;}
+        to{left:300px;}
+    }
+</style>
+</head>
+<body>
+    <div class="box1">애니메이션 박스1</div>
+    <div class="box2">애니메이션 박스2</div>
+</body>
+</html>

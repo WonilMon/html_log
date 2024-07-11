@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            function move(obj, time) {
+                $(obj).animate(
+                    {
+                        left: -350,
+                    },
+                    time
+                );
+            }
+            function back(obj) {
+                $(obj).animate({ left: 0 });
+            }
+        </script>
+        <style>
+            .moving {
+                border: 1px solid;
+                margin: 20px auto;
+                text-align: right;
+                width: 550px;
+            }
+            .moving img {
+                width: 200px;
+                height: 150px;
+                cursor: pointer;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="init">
+            <button type="button" onclick="back('.moving img')">초기화</button>
+        </div>
+        <div class="moving">
+            <img src="./img/sul1.png" onclick="move(this, 6000)" /><br />
+            <img src="./img/sul2.jpg" onclick="move(this, 6000)" /><br />
+            <img src="./img/pic1.jpg" onclick="move(this, 6000)" /><br />
+            <img src="./img/pic2.jpg" onclick="move(this, 6000)" /><br />
+        </div>
+    </body>
+</html>

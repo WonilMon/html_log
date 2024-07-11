@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>05. video</title>
+</head>
+<body>
+    <header>
+        <center>
+            <h2>&lt;비디오&gt;</h2>
+        </center>
+    </header>
+    <hr/>
+    <section>
+        <article>
+            <h3>비디오 자동재생</h3>
+            <video src = "./resource/bear.mp4" controls autoplay width="300" height="250"></video>
+            
+            <h3>비디오 수동재생</h3>
+            <video src = "./resource/bear.mp4" controls width="300" height="250"></video>
+            
+            <h3>비디오 다중재생</h3>
+            <video controls width="300" height="250">
+                <source src="./resource/small.mp4" type="video/mpeg"></source>
+                <source src="./resource/small.ogg" type="video/ogg"></source>
+                <source src="./resource/small.webm" type="video/webm"></source>
+            </video>
+           
+            <h3>비디오 다중재생 (파일이 웹상에 있는 경우)</h3>
+            <video controls width="300" height="250">
+                <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"></source>
+                <source src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg"></source>
+            </video>
+        </article>
+    </section>
+    <hr/>
+    <footer>
+
+    </footer>
+</body>
+</html>

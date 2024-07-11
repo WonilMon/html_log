@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>15.iframe</title>
+</head>
+<body>
+	<!-- 많이 안쓰긴 해요 -->
+	<h3>iframe 공간 분할 예제</h3>
+	<div style = "background-color: #ffff00;">
+		<span>
+			<a href="15.intro.html" target="if_a">인사말</a>
+		</span>
+		<span>
+			<a href="15.lecture.html" target="if_a">강의소개</a>
+		</span>
+		<span>
+			<a href="15.intro.html" target="if_b">저자소개</a>
+		</span>
+		<span>
+			<a href="http://cafe.naver.com/go2web" target="if_b">강의소개</a>
+		</span>
+	</div>
+	
+	<p/>
+	
+	<!-- src에 다른 html을 가져와서 표시하는 기능 -->
+	<iframe src="15.basic.html" frameborder="1" width="400" height="200" name="if_a"></iframe>
+	<iframe src="15.basic.html" frameborder="1" width="400" height="200" name="if_b" scrolling="yes"></iframe>
+	
+</body>
+</html>

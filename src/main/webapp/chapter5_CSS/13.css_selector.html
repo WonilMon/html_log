@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>13.css_selector</title>
+<style>
+	/* h1 형제 중에서 ul 태그가 나오면 요소를 변경하라 */
+	h1~ul{color: blue;}
+	/* div 형제 중에서 h3 태그가 나오면 요소를 변경하라 */
+	div~h3{color: red;}
+	/* 각 태그 그룹으로 지정 */
+	h1, h2, h4{background-color: gray;}
+</style>
+</head>
+<body>
+	<div>
+		<h1>형제 선택자1</h1>
+		<h2>형제 선택자2</h2>
+		<h3>형제 선택자3</h3>
+		<ul>
+			<li>주제1</li>
+			<li>주제2</li>
+			<li>주제3</li>
+		</ul>
+	</div>
+
+	<h3>Sibling Selector-1</h3>
+	<h3>Sibling Selector-2</h3>
+	<h3>Sibling Selector-3</h3>
+
+	<h4>같은 레벨의 형제</h4>
+</body>
+</html>

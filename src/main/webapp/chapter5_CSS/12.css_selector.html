@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>12.css_selector</title>
+<style>
+	/* div 요소의 후손인 모든 h2 요소를 변경 */
+	div h2{color: yellow; background-color: purple;}
+	/* div 요소의 후손인 모든 ul 요소를 변경 */
+	div ul{color: red;}
+	/* div 요소의 후손인 모든 li 요소를 변경 */
+	div li{color: blue;}
+
+	/* '>' : 직계자식만 요소 변경 */
+	div>h3{color: green;}
+
+	/* '+' : 형제의 요소를 변경하라 */
+	h1+h2{color: green; background-color: yellow;}
+</style>
+</head>
+<body>
+	<div>
+		<h2>Descendant Selector</h2>
+		<ul>후손선택자
+			<li>자식의 자식(후손1)</li>
+			<li>자식의 자식(후손2)</li>
+		</ul>
+	</div>
+
+	<div>
+		<h3>Child Selector</h3>
+	</div>
+
+	<div>
+		<h1>인접 형제 선택자1</h1>
+		<h2>인접 형제 선택자2</h2>
+	</div>
+</body>
+</html>
+
+<!--
+자식 선택자(>)
+-특정 요소의 직계자식 선택
+-부모 요소의 바로 아래에 있는 자식 요소만을 선택
+
+후손 선택자(공백)
+-특정 요소의 모든 후손을 선택
+-부모 요소의 자식, 자식의 자식, 그 아래 모든 후손 요소를 포함
+-->

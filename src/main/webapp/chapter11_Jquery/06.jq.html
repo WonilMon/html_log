@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>06.jq</title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('div').hide();
+            });
+            $('p.q1').click(function () {
+                $('div.q1').show();
+            });
+            $('p.q2').click(function () {
+                $('div.q2').show();
+            });
+        </script>
+        <style>
+            div q1 {
+                color: red;
+                font-size: 18px;
+            }
+            div q2 {
+                color: blue;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>질문1: 대한민국의 수도는 어디입니까?</h2>
+        <p class="'q1'">정답보기</p>
+        <div class="'q1">대한민국의 수도는 <strong>서울</strong>입니다</div>
+        <p />
+        <h2>질문1: 대한민국의 국보1호는 무엇입니까?</h2>
+        <p class="'q1'">정답보기</p>
+        <div class="'q1">대한민국의 국보1호는 <strong>숭례숭례</strong>입니다</div>
+    </body>
+</html>

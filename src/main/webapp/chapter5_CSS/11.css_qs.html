@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>11.css_qs</title>
+<style>
+	div{color: white;}
+
+	/* 요소의 첫번째 글자 */
+	h2::first-letter{text-transform: uppercase;}
+
+	/* 요소 중 첫번째 줄 */
+	h3::first-line{color: blue;}
+
+	/* input의 focus라는 기능 (hover) */
+	input:focus{background-color: yellow;}
+
+ /* check 하는 순간 div를 변화시키겠다
+	'+' : 형제의 요소를 변경하라 */
+	input:checked+div.d1 {background-color: gray;}
+	input:checked+div.d2 {background-color: black;}
+	
+</style>
+</head>
+<body>
+	<h2>states pseudo-classes</h2>
+	<h3>
+		문제> <br/>
+		대한민국의 수도는?
+	</h3>
+
+	<p>
+		정답작성 : <input type="text" />
+	</p>
+
+	<h2>정답</h2>
+	힌트보기 :  <input type="checkbox" />
+
+	<div class="d1">
+		남대문이 있는 곳입니데이
+	</div>
+
+	정답보기 :  <input type="checkbox" />
+
+	<div class="d2">
+		서울
+	</div>
+
+</body>
+</html>

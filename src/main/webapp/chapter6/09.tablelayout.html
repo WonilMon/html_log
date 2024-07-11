@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>09.tablelayout</title>
+        <style>
+            td,
+            th {
+                border: 2px solid black;
+            }
+            .tb1 {
+                /* Table Layout Auto */
+                border: 2px solid red;
+                table-layout: auto;
+                /* 테이블 내용의 길이에 따라 경계선 크기를 알아서 결정*/
+            }
+            .tb2 {
+                /* Table Layout Fixed */
+                width: 300px;
+                border: 3px dotted teal;
+                background-color: yellow;
+                table-layout: fixed;
+                /* 테이블 내용의 길이가 길어지면 높이만 변경되지 고정값대로 결정*/
+            }
+            .tb3 {
+                /* Table Border-Collapse */
+                border: 3px solid red;
+                background-color: yellow;
+                border-collapse: collapse;
+                table-layout: auto;
+                /*경계선이 딱 붙어요*/
+            }
+            .tb4 {
+                /* Table Border-Separate */
+                border: 3px solid red;
+                background-color: yellow;
+                border-collapse: separate;
+                table-layout: auto;
+                /*경계선이 분리됨*/
+            }
+            .tb5 {
+                /* Table Border-Spacing */
+                border: 2px solid red;
+                border-spacing: 10px;
+                /* 행과 행 사이의 거리를 의미 */
+            }
+            .tb6 {
+                /* Table Border-Spacing */
+                border: 4px solid red;
+                border-spacing: 20px 40px;
+                /* 좌우(20) / 상하 (40) 거리를 의미 */
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Table Layout Auto</h2>
+        <table class="tb1">
+            <tr>
+                <th>Table Layout Auto</th>
+                <td>내용 분량에 따라서 자동으로 조절</td>
+            </tr>
+        </table>
+
+        <hr />
+
+        <h2>Table Layout Fixed</h2>
+        <table class="tb2">
+            <tr>
+                <th>Table Layout Fixed</th>
+                <td>내용 분량과 상관없이 고정</td>
+            </tr>
+        </table>
+
+        <hr />
+
+        <h2>Table Border-Collapse</h2>
+        <table class="tb3">
+            <tr>
+                <th>Table Border-Collapse</th>
+                <td>collapse 적용</td>
+            </tr>
+        </table>
+
+        <hr />
+
+        <h2>Table Border-Collapse</h2>
+        <table class="tb4">
+            <tr>
+                <th>Table Border-Collapse</th>
+                <td>separate 적용</td>
+            </tr>
+        </table>
+
+        <hr />
+
+        <h2>Table Border-Spacing</h2>
+        <table class="tb5">
+            <tr>
+                <th>Table Border-Spacing</th>
+                <td>10px</td>
+            </tr>
+        </table>
+
+        <hr />
+
+        <h2>Table Border-Spacing</h2>
+        <table class="tb6">
+            <tr>
+                <th>Table Border-Spacing</th>
+                <td>20px 40px</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                let xWidth = 100;
+                let yHeight = 100;
+                $('div').click(function () {
+                    $(this).width(xWidth).height(yHeight).addClass('box');
+                    /*
+                        $(this).width(xWidth);
+                        $(this).height(yHeight);
+                        $(this).addClass('box');
+                   */
+
+                    xWidth -= 10;
+                    yHeight -= 10;
+                });
+
+                $('button').click(function () {
+                    $('h1, h2, p, h3').toggleClass('red');
+                    //지정된 클래스에 요소가 있으면 제거, 없으면 추가
+                });
+            });
+        </script>
+    </head>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 5px;
+            background: yellow;
+        }
+
+        .box {
+            background: blue;
+        }
+
+        .red {
+            color: red;
+            border: 1px solid blue;
+        }
+        p.gap {
+            height: 120px;
+        }
+    </style>
+    <body>
+        <div>박스1</div>
+        <div>박스2</div>
+        <div>박스3</div>
+        <div>박스4</div>
+        <div>박스5</div>
+        <p class="gap"></p>
+        <hr />
+        <h1>HTML</h1>
+        <h2>CSS</h2>
+        <p>JavaScript</p>
+        <h3>JQuery</h3>
+        <p />
+        <button>CSS적용/해제</button>
+    </body>
+</html>

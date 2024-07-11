@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>09.Q&A</title>
+    </head>
+    <body>
+        <script>
+            /* 아래와 같은 형식
+            let test = [
+                { a: '가', b: '나' },
+                { a: '다', b: '라' },
+                { a: '마', b: '바' },
+            ];
+            */
+            let list = [
+                {
+                    q: '이 중에서 가장 좋아하는 색상을 고르시오',
+                    o: ['빨간색', '파란색', '녹색', '노란색', '보라색'],
+                },
+                {
+                    q: '이 중에서 가장 좋아하는 운동을 고르시오',
+                    o: ['축구', '농구', '수영', '테니스', '달리기'],
+                },
+                {
+                    q: '이 중에서 가장 좋아하는 음악장르를 고르시오',
+                    o: ['클래식', '재즈', '팝', '록', '힙합'],
+                },
+            ];
+
+            for (let i = 0; i < list.length; i++) {
+                let test = list[i].q + '\n';
+                for (let j = 0; j < list[i].o.length; j++) {
+                    test += j + 1 + '. ' + list[i].o[j] + '\n';
+                }
+                list[i].answer = prompt(test);
+            }
+
+            for (let i = 0; i < list.length; i++) {
+                let index = parseInt(list[i].answer);
+                let lastAnswer = list[i] + '당신이 고른 것은? ' + list[i].o[index - 1] + '\n';
+                alert(lastAnswer);
+            }
+        </script>
+    </body>
+</html>

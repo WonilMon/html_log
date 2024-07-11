@@ -1,0 +1,38 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+.top {
+    width: 100%;
+    max-width: 1200px;
+    height: 150px;
+    padding: 0 20px; /* left and right */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    box-shadow: 0 10px 10px  rgba(0, 0, 0, 0.1);
+}
+
+.top_top {
+    width: 100%;
+    max-width: 1200px;
+
+}
+.top_bottom {
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+}

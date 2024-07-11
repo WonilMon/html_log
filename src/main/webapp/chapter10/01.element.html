@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>01.element</title>
+    </head>
+    <body>
+        <p id="var1"></p>
+        <p id="var2"></p>
+        <p id="var3"></p>
+
+        <script>
+            let car = {
+                name: 'Sonata',
+                speed: 100,
+                color: 'white',
+            };
+            document.getElementById('var1').textContent = `자동차 이름 : ${car.name}`;
+            //textContent : HTML 요소의 텍스트 콘텐츠를 가져오거나 설정
+            document.getElementById('var2').textContent = '자동차 속도 : ' + car['speed'];
+            document.getElementById('var3').textContent = '자동차 색상 : ' + car['white'];
+        </script>
+    </body>
+</html>
+
+<!--
+객체
+-여러 속성을 하나의 변수에 저장할 수 있도록 해주는 데이터 타입
+-키(key)와 값(value)으로 구성된 프로퍼티(property)들의 집합
+-프로퍼티의 value는 자바스크립트에서 사용할 수 있는 모든 값들 사용가능!!
+-->

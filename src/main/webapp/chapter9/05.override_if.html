@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>04.override_add</title>
+    </head>
+    <body>
+        <script>
+            function add(x, y, z) {
+                let sum = 0;
+                if (y === undefined && z === undefined) {
+                    sum = x;
+                } else if (z === undefined) {
+                    sum = x + y;
+                } else {
+                    sum = x + y + z;
+                }
+                return sum;
+            }
+
+            let r1 = add(2);
+            let r2 = add(2, 3);
+            let r3 = add(2, 3, 4);
+            let r4 = add(2, 3, 4, 5);
+
+            document.write('함수인자부족 : ' + r1 + '<br/>');
+            document.write('함수인자부족 : ' + r2 + '<br/>');
+            document.write('정상호출 : ' + r3 + '<br/>');
+            document.write('함수인자과다 : ' + r4 + '<br/>'); //짤림
+        </script>
+    </body>
+</html>

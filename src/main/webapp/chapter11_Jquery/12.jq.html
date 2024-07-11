@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>12.jq</title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                $('button').click(function () {
+                    let imgSrcd = $('img').attr('src'); //속성값 읽어오기
+                    console.log(imgSrcd);
+
+                    $('img').attr('src', './img/sul2.jpg');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>.attr()메서드</h1>
+        <p>이미지가 변경됩니다</p>
+        <button>변경</button>
+        <p />
+        <img src="./img/sul1.png" style="width: 320px; height: 214px; border: 1px solid black" />
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>01.func</title>
+    </head>
+    <body>
+        <script>
+            let text1 = '함수 선언 전 호출';
+            let text2 = '함수 선언 후 호출';
+
+            printMSG1(text1);
+
+            //변수는 이름만 호이스팅 되고, 값은 호이스팅 되지않음
+            //그러나 함수같은 경우 선언하면 함수 자체 내용까지 다 끌고 올라감.
+            //그래서 위의 printMSG1(text1); 가 오류가 나지않음.
+            function printMSG1(msg) {
+                document.write('함수 호출 메시지: ' + msg + '<br/>');
+            }
+            printMSG1(text2);
+            document.write('<p/>');
+            document.write('<hr/>');
+            /*
+        기명함수
+        함수 선언문을 사용해 이름을 가진 함수
+        호이스팅 특서엥 의해 함수 선언문이 코드 상단으로 끌어올려지므로 함수 선언 이전에 함수 호출가능
+        */
+
+            //=====================================================
+
+            let text3 = '함수 선언 전 호출';
+            let text4 = '함수 선언 후 호출';
+
+            printMSG2(text3);
+
+            //이 익명함수는 호이스팅의 대상이 되지 않아요
+            let printMSG2 = function (msg) {
+                //이건 이름없는 익명함수임
+                document.write('함수 호출 메시지 : ' + msg + '<br/>');
+            };
+            printmsg2(text4);
+
+            /*
+        무명함수
+        이름이 없는 함수, 일반적으로 변수에 할당하거나 다른 함수의 인자로 전달하여 사용
+        호이슽이 불가, 따라서 함수 선언 이전에 호출이 불가
+        */
+
+            //=====================================================
+            //기명과 무명 만들어서 우선순위를 한번 볼게요
+
+            function printMSG3(msg) {
+                document.write('기명함수 : ' + msg + '<br />');
+            }
+            var printMSG3 = function (msg) {
+                document.write('익명함수 : ' + msg + '<br />');
+            };
+            printMSG3('호출되었습니다');
+
+            //무명함수가 호출 시 우선순위가 높음
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02.css_mp</title>
+<style>
+    p {background-color: yellow; color: red; font-weight: bold; font-size: 16pt;}
+    p.pad {color: purple; padding: 20px;}
+    p.mar {color: green; margin: 30px;}
+    p.mp {color: blue; padding: 5%; margin: 5%;}
+    .mp1 {background-color: aqua; color: red;
+        padding-left: 50px; margin-bottom: 40px;}
+    .mp2 {background-color: silver; color: green;
+        padding: 30px 20px; margin-bottom: 40px;} 
+    .mp3 {background-color: gray; color: purple;
+        padding: 20px; margin-bottom: 50px 15px 20px;}
+    /* 
+    padding 이든 margin 이든
+    값 2개 : 상하, 좌우
+    값 3개 : 상, 좌우, 하
+    */
+</style>
+</head>
+<body>
+    <p class="pad">1) 안쪽 여백 지정 - padding 20px</p>
+    <p class="mar">2) 바깥쪽 여백 지정 - margin 20px</p>
+    <p class="mp">3) 안쪽,바깥쪽 여백 지정 - padding 5%, margin 5%</p>
+
+    <hr/>
+
+    <p class="mp1">mp1</p>
+    <p class="mp2">mp2</p>
+    <p class="mp3">mp3</p>
+
+
+</body>
+</html>

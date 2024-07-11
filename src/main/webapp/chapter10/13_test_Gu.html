@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="EUC-KR" />
+        <title>Insert title here</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            tr {
+                background-color: #f9f9f9;
+            }
+
+            th {
+                background-color: #0033a0;
+                border: 1px solid black;
+                color: white;
+                padding: 8px;
+            }
+
+            td {
+                background-color: rgba(0, 51, 160, 0.2);
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>�л� ���� �Է�</h2>
+        <input type="text" id="name" placeholder="�̸�" />
+        <br />
+        <input type="text" id="grade" placeholder="�г�" />
+        <br />
+        <input type="text" id="department" placeholder="�а�" />
+        <br />
+        <button onClick="addstudent()">�л��߰�</button>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>�̸�</th>
+                    <th>�г�</th>
+                    <th>�а�</th>
+                </tr>
+            </thead>
+            <tbody id="student-table"></tbody>
+        </table>
+        <script>
+            function addstudent() {
+                const name = document.getElementById('name').value;
+                const grade = document.getElementById('grade').value;
+                const department = document.getElementById('department').value;
+
+                if (!name || !grade || !department) {
+                    alert('���� �Է����ּ���.');
+                    return;
+                }
+
+                const studentData = document.getElementById('student-table');
+                studentData.innerHTML += `
+				<tr>
+					<td>${name}</td>
+					<td>${grade}</td>
+					<td>${department}</td>
+				</tr>
+			`;
+            }
+        </script>
+    </body>
+</html>

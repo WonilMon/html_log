@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>08.tmenu</title>
+        <style>
+            div {
+                width: 100px;
+                height: 50px;
+                background-color: lightcoral;
+                color: yellow;
+                border: 1px solid black;
+                transition: width 3s;
+            }
+            div:hover {
+                width: 400px;
+            }
+            .div1 {
+                transition-timing-function: linear;
+            } /* 동일한 속도로 전환 효과 (Default) */
+            .div2 {
+                transition-timing-function: ease;
+            } /* 처음과 끝만 느림 */
+            .div3 {
+                transition-timing-function: ease-in;
+            } /* 처음만 느림 */
+            .div4 {
+                transition-timing-function: ease-out;
+            } /* 끝만 느림 */
+            .div5 {
+                transition-timing-function: ease-in-out;
+            } /* 처음과 끝 느림, 중간 Default*/
+        </style>
+    </head>
+    <body>
+        <div class="div1">linear</div>
+        <div class="div2">ease</div>
+        <div class="div3">ease-in</div>
+        <div class="div4">ease-out</div>
+        <div class="div5">ease-in-out</div>
+    </body>
+</html>

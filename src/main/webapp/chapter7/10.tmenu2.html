@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>10.tmenu2</title>
+<style>
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    div{
+        border: 1px solid red;
+        background-color: #ff8800;
+        width: 80px;
+        height: 50px;
+        /*  텍스트 수직 정렬 */
+        line-height: 50px;
+        transition-property: width background-color;
+        transition-duration: 3s;
+    }
+    div:hover{
+        width: 200px;
+        background-color: #ff8800;
+        color: white;
+        font-size: 30px;
+        /* 텍스트 정렬 */
+        text-align: center;
+        transition-timing-function: linear;
+    }
+</style>
+</head>
+<body>
+    <div><a href="#">HOME</a></div>
+    <div><a href="#">ABOUT</a></div>
+    <div><a href="#">NEWS</a></div>
+    <div><a href="#">STUDY</a></div>
+    <div><a href="#">CONTANCT</a></div>
+</body>
+</html>

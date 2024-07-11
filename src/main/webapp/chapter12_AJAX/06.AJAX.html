@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            //매우 간단한 API
+            $(function () {
+                $('#getDogImage').click(function () {
+                    $.ajax({
+                        url: 'https://dog.ceo/api/breeds/image/random',
+                        type: 'get',
+                        success: function (wonil) {
+                            $('#dogImage').attr('src', wonil.message);
+                        },
+                        error: function (error) {
+                            alert('요청 오류');
+                        },
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h2>강아지 이미지 가져오기</h2>
+        <button id="getDogImage">강아지 이미지 가져오기</button>
+        <p />
+        <hr />
+        <p />
+        <img id="dogImage" src="" alt="개 이미지" />
+    </body>
+</html>

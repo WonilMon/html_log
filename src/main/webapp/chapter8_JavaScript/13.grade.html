@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>13.grade</title>
+</head>
+<body>
+    <script>
+        let grade = prompt('점수 입력ㄱㄱ');
+
+        if(grade>=90 && grade<=100) {
+            location.href = "13.A.html"
+        }else if(grade>=80 && grade<90) {
+            location.href = "13.B.html"  
+        }else if(grade>=70 && grade<80) {
+            location.href = "13.C.html"  
+        }else if(grade>=60 && grade<70) {
+            location.href = "13.D.html"  
+        }else if(grade<=60 && grade>=0) {
+            location.href = "13.F.html"  
+        }else {
+            location.href = "13.error.html"  
+        }
+    </script>
+</body>
+</html>
+

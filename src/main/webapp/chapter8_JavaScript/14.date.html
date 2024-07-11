@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>14.date</title>
+</head>
+<body>
+    <script>
+        let text;
+        let week = new Date().getDay();
+        //Date : 내장객체(단, document나 location 등과 달리 필요할 때마다 생성)
+
+        if(week==1 || week==2){
+            text="HTML5";
+        }else if(week==3 || week==4){
+            text="JavaScript";
+        }else if(week==5 || week==6) {
+            text="CSS"
+        }else{date;}
+        
+        document.write("오늘은 <b>" + text + "</b> 학습하는 날입니다.")
+
+    </script>
+</body>
+</html>
+

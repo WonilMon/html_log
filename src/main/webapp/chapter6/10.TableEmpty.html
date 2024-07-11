@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>10.TableEmpty</title>
+        <style>
+            td,
+            th {
+                border: 1px solid blue;
+            }
+            .tb1 {
+                /* step1. tb1을 가져와서 경계선을 분리시켜주고 */
+                border-collapse: separate;
+                /* step2. caption을 위에다가 배치 */
+                caption-side: top;
+                /* step3. 비어있는 행을 숨겨준다 */
+                empty-cells: hide;
+            }
+            .tb2 {
+                border-collapse: separate;
+                caption-side: bottom;
+                empty-cells: show;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- step0. 비어있는 행이 있는 표 만들기1 -->
+        <table class="tb1" border="1" width="300px">
+            <caption>
+                [table1-1] Korea University
+            </caption>
+            <tr>
+                <td>국어</td>
+                <td>영어</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>수학</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <br />
+        <!-- 0step. 비어있는 행이 있는 표 만들기2 -->
+        <table class="tb2" border="1" width="300px">
+            <caption>
+                [table1-2] USA University
+            </caption>
+            <tr>
+                <td>국어</td>
+                <td>영어</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>수학</td>
+                <td></td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<!--
+empty-cells : show (빈 셀을 표시)
+empty-cells : hide (빈 셀을 비표시)
+caption-side (캡션의 위치)
+-->

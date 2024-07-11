@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                $('#slide').click(function () {
+                    $('#panel').slideDown(5000);
+                });
+                $('#panel').click(function () {
+                    $('#panel').slideUp(5000);
+                });
+                $('#flip').click(function () {
+                    $('#panel').slideToggle('slow');
+                });
+                $('#slide2').click(function () {
+                    $('#panel2').slideDown(3000).slideUp(5000).css('color', 'red').fadeTo('slow', 0.5);
+                    //이런식으로 동시다발적으로 일어난다면 여러가지 줄 수 있음
+                });
+            });
+            //.slideDown : display를 none에서 block으로 변경
+            //.slideUp : display를 block에서 none으로 변경
+            //.slideToggle : slideDown + slideUp
+        </script>
+    </head>
+    <style>
+        #slide,
+        #panel,
+        #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: 1px solid #c3c3c3;
+        }
+
+        #panel {
+            padding: 70px;
+            display: none;
+            background-color: #ffff00;
+        }
+
+        #panel2 {
+            padding: 70px;
+            display: none;
+            /*  처음에 화면에 표시하지 않기 */
+            background-color: #ffff00;
+            font-size: 20px;
+        }
+    </style>
+    <body>
+        <div id="slide">[오늘의 공지]</div>
+        <div id="panel">
+            6월 24일(월) 공지<br />
+            제이쿼리 강의 <br />
+            AJAX 강의 <br />
+        </div>
+
+        <div id="flip">Toggle Slide</div>
+        <p />
+        <hr />
+        <div id="slide2">[오늘의 공지]</div>
+        <div id="panel2">
+            6월 24일(월) 공지<br />
+            제이쿼리 강의 <br />
+            AJAX 강의 <br />
+        </div>
+    </body>
+</html>

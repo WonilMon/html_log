@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                $('#loadButton').click(function () {
+                    $.ajax({
+                        url: './dummy.json',
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function (data) {
+                            console.log(data);
+                            $('#titleLayout').html('<h2>' + data.title + '</h2>');
+                            $('.subjectLayout').html('<h2>' + data.subject + '</h2>');
+
+                            let list = data.list;
+                            let tableTag = '';
+                            /*
+                            for (let i = 0; i < list.length; i++) {
+                                tableTag += '<tr><td>' + list[i].subject + '</td><td>' + list[i].content + '</td></tr>';
+                            }
+                            */
+                            $.each(list, function (index, row) {
+                                tableTag += '<tr><td>' + row.subject + '</td><td>' + row.content + '</td><tr>';
+                            });
+                            $('table').html(tableTag);
+                        },
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" value="로드" id="loadButton" />
+        <div id="titleLayout"></div>
+        <div class="subjectLayout"></div>
+        <table style="width: 100%; border: 1px solid"></table>
+    </body>
+</html>

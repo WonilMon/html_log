@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>15.dropdown</title>
+<style>
+    ul{
+        list-style-type: none;  /* 1. 모든 ul의 스타일을 없앤 후 */
+        padding: 0; margin: 0;
+    }
+    li{
+        display: inline-block;  /* 2. list를 좌우정렬로 변경 */
+    }
+    li a{                       /* 3. list의 후손 a 공통적용 (버튼처럼 만들기 위해) */
+        width: 160px; padding: 8px; background-color: #0047bb; color: white; text-decoration: none;
+        display: block;         /* 5. 겹친상태를 해결하기 위한 블록 */
+    }
+    li a:hover{
+        background-color: #0059e6;
+    }
+
+    li ul{  
+        display: block;         /* 4. 방식을 block으로 바꿔서 상하정렬로 */
+        display: none;          /* 7. 다시 감춰주고 */
+        width: 160px;
+        position: absolute;     /* 6. absolute로 메뉴1,2,3을 잡아주고 */
+    }
+    li:hover > ul{
+        display: block;
+    }
+</style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#">메뉴1</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴1</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">메뉴2</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴1</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">메뉴3</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴1</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

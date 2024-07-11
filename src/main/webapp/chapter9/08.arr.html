@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>08.arr</title>
+</head>
+<body>
+    <button type="button" onclick="printAll()"> 전체 배열 </button>
+    <hr/>
+    <button type="button" onclick="printOdd()"> 홀수 배열 </button>
+    <script>
+        let arr0 = [10,20,30,40,50];
+        let arr1 = [11,21,31,41,51];
+        let arr2 = [12,22,32,42,52];
+        let arr3 = [13,23,33,43,53];
+
+        // 2치원 배열: array in array
+        let allArr = [arr0, arr1, arr2, arr3]; 
+
+        console.log(allArr[0][3]);
+
+        function printAll() {
+            for(let x=0; x<allArr.length;x++) {
+                for(let y=0; y<allArr[x].length;y++) {
+                    document.write(allArr[x][y] + " ");
+                }
+                document.write("<p/>");
+            }
+            document.write("<a href = '08.arr.html'>돌아가기</a>");
+
+        }
+
+        function printOdd() {
+            for(let z=0; z<allArr.length;z++) {
+                if(z%2===1) {
+                    for(let j=0; j<allArr[z].length;j++) {
+                        document.write(allArr[z][j] + " ");
+                    }
+                }
+                document.write("<p/>");
+            }
+            document.write("<a href = '08.arr.html'>돌아가기</a>");
+        }
+        
+
+    </script>
+</body>
+</html>

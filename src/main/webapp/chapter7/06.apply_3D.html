@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>05.apply_3D</title>
+<style>
+    div{
+        background-color: green;
+        width: 150px;
+        height: 150px;
+    }
+    .container{
+        background-color: yellow;
+        border: 1px solid black;
+    }
+    .transformed1:hover{
+        backface-visibility: visible;
+        transform: perspective(500px) rotateX(0deg) rotateY(50deg); 
+    }
+    .transformed2:hover{
+        backface-visibility: visible;
+        transform: perspective(500px) rotateX(140deg) rotateY(0deg); 
+    }
+    /* backface-visibility : visible -> 뒷면의 요소가 보이도록 설정 */
+    /* backface-visibility : hidden -> 뒷면만 보이도록 설정 */
+    /* perspective : 3D변환의 원근 효과를 설정하는 속성, 픽셀 단위가 작을수록 원근효과 ↑ */
+</style>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <div class="transformed1">박스1</div>
+        </div>
+
+        <div class="container">
+            <div class="transformed2">박스2</div>
+        </div>
+    </div>
+</body>
+</html>

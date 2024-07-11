@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>13.test</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            tr {
+                background-color: #f9f9f9;
+            }
+
+            th {
+                background-color: #0033a0;
+                border: 1px solid black;
+                color: white;
+                padding: 8px;
+            }
+
+            td {
+                background-color: rgba(0, 51, 160, 0.2);
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>학생 정보 입력</h2>
+        <input type="text" id="name" placeholder="이름" />
+        <br />
+        <input type="text" id="grade" placeholder="학년" />
+        <br />
+        <input type="text" id="department" placeholder="학과" />
+        <br />
+        <button onclick="addStudent()">학생 추가</button>
+
+        <br />
+        <hr />
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>학년</th>
+                    <th>학과</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable"></tbody>
+        </table>
+
+        <script>
+            function addStudent() {
+                let name = document.getElementById('name').value;
+                let grade = document.getElementById('grade').value;
+                let department = document.getElementById('department').value;
+                let studentTable = document.getElementById('studentTable');
+
+                let tr = document.createElement('tr');
+                let th1 = document.createElement('th');
+                let th2 = document.createElement('th');
+                let th3 = document.createElement('th');
+                let insertName = document.createTextNode(name);
+                let insertGrade = document.createTextNode(grade);
+                let insertDepartment = document.createTextNode(department);
+
+                th1.appendChild(insertName);
+                th2.appendChild(insertGrade);
+                th3.appendChild(insertDepartment);
+
+                tr.appendChild(th1);
+                tr.appendChild(th2);
+                tr.appendChild(th3);
+
+                studentTable.appendChild(tr);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>10.date.html</title>
+</head>
+<body>
+	<form action="getdata4.jsp" method="get">
+		
+		<h3>오늘 날씨 입력</h3>
+		Today:<input type="date" name="today"/>
+		
+		<h3>프로젝트 수행 기간</h3>
+		From:<input type="date" name="from" min="2024-08-16" max="2024-08-23"/>
+		To:<input type="date" name="to" min="2024-09-20" max="2024-09-27"/>
+		d
+		<p/>
+		<hr/>
+		
+		<h3>생일(년/월) 입력</h3>
+		birth: <input type="month" name="birth">
+		<h3>주간 계획(년/주) 입력</h3>
+		주간계획: <input type="week" name="weekend">
+		
+		<p/>
+		<hr/>
+		
+		<input type="submit" value="제출"/>
+		<input type="reset" value="재작성"/>
+	</form>
+</body>	
+</html>

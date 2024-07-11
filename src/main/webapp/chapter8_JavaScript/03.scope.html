@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03.scope - var와 let</title>
+</head>
+<body>
+    <script>
+        function varTest() {
+            var x = 1;
+            if(true) {
+                var x = 2; /* 이게 새로운 x가 아님 */
+                console.log(x);
+            }
+            console.log(x);
+        }
+    varTest();
+    /* var는 변수가 아니라 함수다 (함수 스코프) 고로 쓰지마셈 */
+    
+        function letTest() {
+            let x = 1;
+            if(true) {
+                let x = 2;
+                console.log(x);
+            }
+            console.log(x);
+        }
+    letTest();
+    /* let은 변수처럼 이용가능 */
+
+        function hostVar() {
+            console.log(z);
+            var z = 3;
+        }
+
+    hostVar();
+    /* 변수 선언만 프로그래밍 시작 전에 프로그램에 알림, 오류X(->undefined로 초기화) */
+
+    function hostLet() {
+            console.log(z);
+            let z = 3;
+        }
+    /* let은 호이스팅은 하지만, 초기화 x (오류가 나지않는다는건 위험할 수 있다) */
+    hostLet();
+    </script>
+
+</body>
+</html>

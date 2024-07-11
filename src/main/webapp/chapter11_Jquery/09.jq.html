@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>09.jq</title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                $('button').click(function () {
+                    $(':checked').next().text('현재 학습중인 교과목입니다.');
+                    //해당요소의 다음요소에 텍스트를 넣어라 (이 경우는 <span>JQuery</span>)
+                    //그냥 텍스트가 아닌 체크박스라서 next 해줘야함
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Form 요소의 선택</h1>
+        <form action="">
+            <input type="checkbox" name="Lecture" value="html" />
+            <span>HTML</span>
+            <br />
+            <input type="checkbox" name="Lecture" value="css" />
+            <span>CSS</span>
+            <br />
+            <input type="checkbox" name="Lecture" value="JavaScript" />
+            <span>JavaScript</span>
+            <br />
+            <input type="checkbox" name="Lecture" value="JQuery" checked />
+            <span>JQuery</span>
+            <p />
+        </form>
+
+        <button>꾹</button>
+    </body>
+</html>

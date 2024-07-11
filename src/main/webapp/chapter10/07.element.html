@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>07.element</title>
+    </head>
+    <body>
+        <p>[Car1]</p>
+        <p id="data10"></p>
+        <p id="data20"></p>
+        <p id="data30"></p>
+
+        <hr />
+        <p>[Car2]</p>
+        <p id="data11"></p>
+        <p id="data21"></p>
+        <p id="data31"></p>
+
+        <hr />
+        <p>[Car3]</p>
+        <p id="data12"></p>
+        <p id="data22"></p>
+        <p id="data32"></p>
+
+        <script>
+            //딱 이포멧임. API끌고올때 다 이렇게 되어있다
+            let car = [
+                { name: 'Sonata', color: 'blue', speed: 100 },
+                { name: 'Jeep', color: 'red', speed: 70 },
+                { name: 'Audi', color: 'white', speed: 150 },
+            ];
+
+            for (let i = 0; i < car.length; i++) {
+                let cname = document.getElementById('data1' + i); //data10을 만드는 법
+                cname.textContent = '자동차 이름 : ' + car[i].name;
+
+                let colname = document.getElementById('data2' + i);
+                colname.textContent = '자동차 색깔 : ' + car[i].color;
+
+                let cspeed = document.getElementById('data3' + i);
+                cspeed.textContent = '자동차 속도 : ' + car[i].speed;
+            }
+        </script>
+    </body>
+</html>

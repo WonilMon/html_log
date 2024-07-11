@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>10.document</title>
+    </head>
+    <body>
+        <a href="#" onclick="add()"> 오늘의 쉅은?</a>
+
+        <script>
+            function add() {
+                //createElement : 새로운 HTML 태그를 만들어 반환
+                let header = document.createElement('h3');
+                //createTextNode:태그에 삽입할 텍스트
+                let textNode = document.createTextNode('JavaScript');
+
+                //부모 노드(header)에 자식 노드(textNode)를 추가
+                header.appendChild(textNode);
+                //부모 노드(document.body)에 자식 노드(header) 추가
+                document.body.appendChild(header);
+
+                //document.write("<h>JavaScript</h>") : 이것도 표시가 가능하지만, 기존의 것을 대체해버림
+            }
+        </script>
+    </body>
+</html>

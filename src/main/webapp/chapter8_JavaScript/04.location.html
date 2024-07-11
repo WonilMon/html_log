@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>04.location - var</title>
+<script> 
+    let num = 0; /* let은 변화를 주면 계속 저장 (걍 변수임) */
+    document.write("head 태그 내 실행순서 : " + num + "<br/>")
+</script>
+<script>
+    /*var num = 1;*/
+    document.write("head 태그 내 실행순서 : " + (num++) + "<br/>")
+</script>
+</head>
+<body>
+    <script>
+        /*var num = 2;*/
+        document.write("head 태그 내 실행순서 : " + (num++) + "<br/>")
+    </script>
+    <script>
+        /*var num = 3;*/ 
+        document.write("head 태그 내 실행순서 : " + num + "<br/>")
+    </script>
+</body>
+</html>
+
+<!--
+let은 재선언 불가 / var를 let으로 바꾸면 이미 선었했다고 오류뜸
+var은 재선언 가능 / var 쓰지마
+-->

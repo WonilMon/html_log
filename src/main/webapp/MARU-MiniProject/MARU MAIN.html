@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MARU</title>
+
+<style>/*<link rel="stylesheet" href="reset.css">*/
+    a {
+        
+        text-decoration: none;
+        color: black;
+    }
+    Top{
+        display: flex;
+        flex-flow: column wrap;
+        align-content: first baseline;
+        width: 1100px;
+    }
+    .TopOfTop {width: 1100px;}
+    .LoginBar {
+        float: right;
+        margin: 10px;
+        font-size: 1.5ch;
+    }
+    .Register {
+        color: rgb(95, 0, 128);
+    }
+    .Search{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 20px;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        width: 1100px;
+    }
+    .MarketKurly {color: rgb(95, 0, 128);}
+    .BeautyKulry {opacity: 0.3;}
+    .BeautyKulry:hover{color: rgb(95, 0, 128); opacity: 1;}
+    .SearchBar{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        position: absolute;
+        left: 350px;
+        width: 400px;
+        height: 40px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(95, 0, 128);
+        border-radius: 5px;
+    }
+    .TextBar{
+        width: 350px;
+        border-style: hidden; v
+    }
+    .SearchBtn {
+        border-style: hidden;
+        background-color: white;
+    }
+    .Buttons{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        position: absolute;
+        left: 950px;
+    }
+    .location_btn:hover{content: url(./images/location_hover.png);}
+    .like_btn:hover{content: url(./images/like_hover.png);}
+    .cart_btn:hover{content: url(./images/cart_hover.png);}
+    .BottomOfTop {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 20px;
+        justify-content: space-between;
+        align-content: center;
+        position: absolute;
+        top: 120px;
+        width: 1100px;
+    }
+    .CategoryBtn{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-style: hidden;
+        background-color: white;
+    }
+    .List1 {position: absolute; left: 300px;}
+    .List2 {position: absolute; left: 430px;}
+    .List3 {position: absolute; left: 560px;}
+    .List4 {position: absolute; left: 690px;}
+    .InformationBtn{
+        border-style: solid;
+        border-color: gray;
+        border-radius: 40%;
+        background-color: white;
+    }
+
+</style>
+</head>
+<body>
+    <Center>
+        <Top class="Head">
+            <div class="TopOfTop">
+                <div class="LoginBar">
+                    <a href="" class="Register">회원가입</a> | 
+                    <a href="" class="Login">로그인</a> | 
+                    <a href="" class="CustomerCenter">고객센터▼</a>
+                </div>
+                <div class="Search">
+                    <span><img src="./images/logo.svg"></span>
+                    <span><a href="" class="MarketKurly"><b>마켓컬리</b></a> 
+                        | <a href="" class="BeautyKulry"><b>뷰티컬리</b></a></span>
+                    <span class="SearchBar">
+                        <input type="text" class="TextBar" placeholder="검색어를 입력해주세요">
+                        <button type="button" onclick="alert('꾸욱')" class="SearchBtn">
+                            <img src="./images/Search.png"> 
+                        </button>
+                    </span>
+                    <span class="Buttons">
+                            <a href="" class="location_btn"><img src="./images/location.png" width="40px"></a>
+                            <a href="" class="like_btn"><img src="./images/like.png" width="40px"></a>
+                            <a href="" class="cart_btn"><img src="./images/cart.png" width="40px"></a>
+                    </span>
+                </div>
+            </div>
+            <div class="BottomOfTop">
+                <span class="Category">
+                    <button type="button" onclick="alert('준비중')" class="CategoryBtn">
+                        <img src="./images/Menu.png">
+                         카테고리
+                    </button>
+                </span>
+                <span class="Menu">
+                        <a href="" class="List1"><b>신상품</b></a>
+                        <a href="" class="List2"><b>베스트</b></a>
+                        <a href="" class="List3"><b>알뜰쇼핑</b></a>
+                        <a href="" class="List4"><b>특가/혜택</b></a>
+                </span>
+                <span class="Information">
+                    <button type="button" onclick="alert('준비중')" class="InformationBtn">샛별·하루 배송안내</button>
+                </span>
+            </div>
+        </Top>
+        
+    </Center>
+    
+
+    <section>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>

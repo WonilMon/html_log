@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>08.css_vaclass</title>
+        <style>
+            a:link {
+                color: green;
+            }
+            a:visited {
+                color: red;
+            }
+            a:hover {
+                text-decoration: overline;
+            }
+            a:active {
+                background-color: yellow;
+            }
+
+            div.d1 {
+                border: 1px dashed red;
+                width: 400px;
+                padding: 15px;
+            }
+            div.d1:hover {
+                background-color: yellow;
+            }
+
+            div.d2 {
+                width: 200px;
+                height: 100px;
+                background-color: green;
+                opacity: 0.9;
+            }
+            div.d2:hover {
+                width: 400px;
+                height: 50px;
+                transition: width 1.5s linear 0.5s, height 2s linear 0.5s;
+            }
+
+            div.d3 {
+                width: 200px;
+                height: 100px;
+                background-color: yellow;
+                opacity: 0.2;
+            }
+            div.d3:hover {
+                width: 400px;
+                height: 50px;
+                transition: all 1.5s linear 0.5s;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- vsclass : 가상 클래스 ( 이건 많이 씁니다 ) -->
+        <h2>Pseudo Class</h2>
+        <p>
+            <!--step1. 링크를 하나 만들고 style로 설정-->
+            <a href="http://www.w3.org" target="_blank">W3C 방문</a>
+            :마우스 이벤트에 따른 링크의 변화
+        </p>
+
+        <div class="d1">
+            <h3>가상클래스1 영역</h3>
+            마우스 위치에 따른 박스 스타일 변화
+        </div>
+
+        <hr />
+
+        <div class="d2">
+            <h3>가상클래스2 영역</h3>
+            늘어나는 박스1
+        </div>
+
+        <hr />
+
+        <div class="d3">
+            <h3>가상클래스2 영역</h3>
+            늘어나는 박스2
+        </div>
+    </body>
+</html>
+
+<!--
+가상클래스(Pseudo-class)
+-CSS에서 특정상태나 조건에 따라 요소를 스타일링 할 수 있는 기능을 제공
+-가상클래스는 HTML 요소가 특정 상황이나 사용자 상호작용에 따라 스타일을 제공
+-가상클래스는 일반적으로 세미콜론(:)을 사용하여 정의
+
+링크 관련 가상 클래스
+_:link (방문하지 않은 링크)
+_:visited (방문한 링크)
+_:hover (마우스를 올렸을 때)
+_:active (클릭하고 있을 때)
+-->
+
+<!--
+padding : 안쪽 여백 (div 영역에 입력값들이 바로 붙지 않도록)
+margin : 바깥쪽 여백 (다른 태그에 바로 붙지 않도록)
+
+opacity : 투명도
+transition : 속성값 변화 명령
+linear : 전환효과의 속도곡선이 일정
+all : 모든 속성이 같은 조건으로 변화
+-->

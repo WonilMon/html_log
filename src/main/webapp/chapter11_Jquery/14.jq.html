@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                $('button.b1').click(function () {
+                    $('img').animate({
+                        width: '100px',
+                    });
+                });
+
+                $('button.b2').click(function () {
+                    $('img').animate({
+                        width: '200px',
+                    });
+                });
+
+                $('button.b3').click(function () {
+                    $('img').animate({
+                        width: '300px',
+                    });
+                });
+
+                /*
+            animate() : 특정 CSS 속성 값을 지정된 시간 동안 애니메아션 효과로 변경하는 데 사용
+                        요소의 크기, 위치, 불투명도 등 다양한 CSS 속성을 부드럽게 변경
+            */
+
+                $('button.move').click(function () {
+                    $('img').animate({
+                        height: '300px',
+                        width: '400px',
+                        left: '300',
+                    });
+                });
+
+                $('button.init').click(function () {
+                    $('img').animate({
+                        height: '150px',
+                        width: '150px',
+                        left: '0',
+                    });
+                });
+            });
+        </script>
+    </head>
+    <style>
+        .css_pic {
+            height: 450px;
+            text-align: center;
+        }
+        .css_pic img {
+            width: 250px;
+        }
+    </style>
+    <body>
+        <div class="css_pic">
+            버튼을 누르면 그림의 크기가 바뀝니다
+            <p>
+                <button class="b1">가로 100픽셀</button>
+                <button class="b2">가로 200픽셀</button>
+                <button class="b3">가로 300픽셀</button>
+                <br />
+                <img src="./img/sul2.jpg" alt="" />
+            </p>
+        </div>
+        <button class="move">확대</button>
+        <button class="init">축소</button>
+
+        <img src="./img/sul1.png" width="150" height="100" style="position: relative" alt="ㅎㅇ" />
+    </body>
+</html>

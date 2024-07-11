@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>03.element</title>
+    </head>
+    <body>
+        <p id="carname"></p>
+        <p id="carcolor"></p>
+        <p id="carspeed"></p>
+
+        <script>
+            let car = {
+                name: 'Sonata',
+                speed: 50,
+                color: 'white',
+                start: function () {
+                    return this.speed + 10;
+                },
+            };
+
+            let cname = document.getElementById('carname');
+            cname.textContent = car.name;
+
+            let ccolor = document.getElementById('carcolor');
+            ccolor.textContent = car.color;
+
+            let cspeed = document.getElementById('carspeed');
+            cspeed.textContent = '속도증가 : ' + car.start();
+        </script>
+    </body>
+</html>

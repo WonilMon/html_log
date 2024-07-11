@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자주 사용하는 EventListener 예제</title>
+    <style>
+        #hoverDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="clickButton">클릭하세요</button>
+    <div id="hoverDiv">마우스를 올려보세요</div>
+    <input type="text" id="inputField" placeholder="여기에 입력하세요">
+    <form id="myForm">
+        <input type="text" name="name" placeholder="이름을 입력하세요">
+        <button type="submit">제출</button>
+    </form>
+    <input type="text" id="changeInput" placeholder="값을 변경하세요">
+    <input type="text" id="keyInput" placeholder="키보드 입력">
+
+    <script>
+        // Click 이벤트 리스너
+        var clickButton = document.getElementById('clickButton');
+        clickButton.addEventListener('click', function() {
+            alert('버튼이 클릭되었습니다!');
+        });
+
+        // Mouseover / Mouseout 이벤트 리스너
+        var hoverDiv = document.getElementById('hoverDiv');
+        hoverDiv.addEventListener('mouseover', function() {
+            hoverDiv.style.backgroundColor = 'lightgreen';
+        });
+        hoverDiv.addEventListener('mouseout', function() {
+            hoverDiv.style.backgroundColor = 'lightblue';
+        });
+
+        // Keydown / Keyup 이벤트 리스너
+        var keyInput = document.getElementById('keyInput');
+        keyInput.addEventListener('keydown', function(event) {
+            console.log('키가 눌렸습니다: ' + event.key);
+        });
+        keyInput.addEventListener('keyup', function(event) {
+            console.log('키가 떼어졌습니다: ' + event.key);
+        });
+
+        // Submit 이벤트 리스너
+        var form = document.getElementById('myForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // 기본 제출 동작을 막습니다.
+            alert('폼이 제출되었습니다!');
+        });
+
+        // Change 이벤트 리스너
+        var changeInput = document.getElementById('changeInput');
+        changeInput.addEventListener('change', function() {
+            alert('값이 변경되었습니다: ' + changeInput.value);
+        });
+
+        // Input 이벤트 리스너
+        var inputField = document.getElementById('inputField');
+        inputField.addEventListener('input', function() {
+            console.log('현재 값: ' + inputField.value);
+        });
+    </script>
+</body>
+</html>

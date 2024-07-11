@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>08.select</title>
+</head>
+<body>
+	<h3>관심 있는 학습 주제 한 가지를 선택하세요</h3>
+	
+	<form action="getdata3.jsp" method="get">
+		<select name="subject"> <!-- option의 값이 subject로 담기는 것 -->
+			<option value="1" selected>HTML5</option> <!-- selected는 default값 -->
+			<option value="2">CSS3</option>
+			<option value="3">JavaScript</option>
+			<option value="4">JQuery</option>
+		</select>
+		<br/>
+		<br/>
+		<input type="submit" value="제출"/>
+		<input type="reset" value="재작성"/>
+	</form>
+	
+	<h3>관심 있는 학습 주제 여러가지 선택하세요</h3>
+	
+	<form action="http://localhost:8080/webapp/getdata3.jsp" method="get">
+		<select name="subject" size="4" multiple> 
+			<option value="1" selected>HTML5</option> 
+			<option value="2">CSS3</option>
+			<option value="3">JavaScript</option>
+			<option value="4">JQuery</option>
+		</select>
+		<br/>
+		<br/>
+		<input type="submit" value="제출"/>
+		<input type="reset" value="재작성"/>
+	</form>
+</body>
+</html>

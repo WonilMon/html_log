@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02.submit</title>
+</head>
+<body>
+	<h2>Post방식을 이용하여 INPUT하기</h2>
+	
+	<form action = "postdata.jsp" method = "post">
+		<p>
+			이름 :
+			<input type = "text" name = "name"/>
+			패스워드 :
+			<input type = "password" name = "pass"/>
+		</p>
+		<p>
+			전공
+			<input type = "text" name = "major"/>
+		</p>
+		<p>
+			점수 :
+			<input type = "text" name = "grade" value = "점수입력"/>
+		</p>
+		
+		<input type = "submit" value = "확인"/>
+		<input type = "reset" value = "재작성"/>
+		
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>01.jq</title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <!--자바쿼리 문법 사용가능-->
+        <script>
+            //JQuery는 이렇게 단축이 가능 ↓↓
+            $(document).ready(function () {
+                //DOM이 준비되었는지 확인, 준비되면 함수를 수행
+                $('button.hide').click(function () {
+                    $('p').hide();
+                });
+                // 이렇게 .show .hide 가능
+                $('.show').click(function () {
+                    $('p').show();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p>제이쿼리</p>
+        <p>문서 ready 이벤트는 여러 다중 함수 구현도 가능하다</p>
+        <button class="hide">메시지 삭 - 제 ★</button>
+        <button class="show">메시지 출 - 력 ☆</button>
+    </body>
+</html>
+<!-- 그냥 하면 이렇게 복잡함
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('button.hide').addEventListener('click', function () {
+            document.querySelectorAll('p').forEach(function () {
+                p.style.display = 'none';
+            });
+        });
+    });
+</script>
+-->

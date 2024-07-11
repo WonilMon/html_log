@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>05.js</title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(window).on('load', function () {
+                console.log('window');
+                $('#win').text('환영합니다.');
+            });
+            $(document).ready(function () {
+                console.log('document1');
+                $('#doc1').text('doc1문서가 모두 로드 완료됨.');
+            });
+            $(document).ready(function () {
+                console.log('document2');
+                $('#doc2').text('doc2문서가 모두 로드 완료됨.');
+            });
+        </script>
+    </head>
+    <body>
+        <h1>문서와 창이 모두 로드되는 시점</h1>
+        <p>두 시점의 차이 확인</p>
+        <iframe src="01.jq.html" width="100%" heigt="250px"></iframe>
+        <p id="win">잠시만 기다려 주세요</p>
+        <p id="doc1">잠시만 기다려 주세요</p>
+        <p id="doc2">잠시만 기다려 주세요</p>
+    </body>
+</html>

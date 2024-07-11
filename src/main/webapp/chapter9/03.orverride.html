@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>03.override</title>
+    </head>
+    <body>
+        <script>
+            function add() {
+                let sum = 1;
+                return sum;
+            }
+
+            function add(x) {
+                let sum = x + 1;
+                return sum;
+            }
+
+            function add(x, y, z) {
+                let sum = x + y + z;
+                return sum;
+            }
+
+            let r0 = add(); //Nan
+            let r1 = add(1); //Nan
+            let r2 = add(1, 2, 3); //6
+            let r3 = add(1, 2, 3, 4); //6
+
+            document.write(r0 + '<p/>');
+            document.write(r1 + '<p/>');
+            document.write(r2 + '<p/>');
+            document.write(r3 + '<p/>');
+
+            // 고로 오버라이딩이 안되고 인자가 많은 놈 우선으로 호출
+            // 초과되는건 앞에 인수대로 짜름
+        </script>
+    </body>
+</html>

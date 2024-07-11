@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>13.animation3</title>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative; /* static이 아닌 relative로 해서 동적으로 */
+        animation: boxmove 5s alternate;
+    }
+    @keyframes boxmove{
+        from{left:0px;}
+        to{left:300px;}
+    }
+    
+    .box1{
+        animation-delay: 1s; 
+        animation-timing-function: ease;    /* transition과 동일 */
+        animation-iteration-count: 3;       /* 3번 반복 */
+    }
+    .box2{
+        animation-delay: 2s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 3;
+    }
+    .box3{
+        animation-delay: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: 3;
+    }
+
+</style>
+</head>
+<body>
+    <div class="box1">애니메이션 박스1</div>
+    <div class="box2">애니메이션 박스2</div>
+    <div class="box3">애니메이션 박스3</div>
+</body>
+</html>

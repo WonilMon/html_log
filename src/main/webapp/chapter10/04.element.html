@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>04.element</title>
+    </head>
+    <body>
+        <p id="carname"></p>
+        <p id="carcolor"></p>
+        <p id="carspeed"></p>
+
+        <script>
+            //변수는 이게 가장 일반적이다
+            let car = new Object();
+            //Object : 자바스크립트 내장 객체, 모든 객체의 기본 프로토타입으로 객체를 생성,조작하는데 사용
+
+            //속성을 추가함과 동시에 값을 넣어주는 것
+            car.name = 'Sonata';
+            car.speed = 100;
+            car.color = 'blue';
+            car.speedUP = function () {
+                return this.speedd + 10;
+            };
+
+            console.log(car);
+
+            let cname = document.getElementById('carname');
+            cname.textContent = '자동차 이름 : ' + car.name;
+
+            let ccolor = document.getElementById('carcolor');
+            ccolor.textContent = '자동차 색깔 : ' + car.color;
+
+            let cspeed = document.getElementById('carspeed');
+            cspeed.textContent = '속도 증가 : ' + car.speedUP();
+        </script>
+    </body>
+</html>

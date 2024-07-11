@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>09.fun.var</title>
+</head>
+<body>
+    <script>
+        var kor = 100;          //전역변수
+        function getGrade() {
+            var kor = 95;       //지역변수
+            var eng = 92;       //지역변수
+            document.write("국어점수 : " + kor + "<br>");
+            document.write("영어점수 : " + eng + "<br>");
+        }
+        getGrade();
+        document.write("국어점수 : " + kor + "<br>");
+        document.write("영어점수 : " + eng + "<br>");
+    </script>
+</body>
+</html>
+

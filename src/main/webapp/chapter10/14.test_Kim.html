@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>13.test</title>
+    </head>
+    <body>
+        <h1>자동차 정보</h1>
+        <div id="carInfo"></div>
+        <button onclick="displayCarinfo()">정보 불러오기</button>
+
+        <script>
+            let cars = [
+                {
+                    name: 'Sonata',
+                    color: 'blue',
+                    speed: 100,
+                    up: function () {
+                        return this.speed + 10;
+                    },
+                },
+                {
+                    name: 'Sonata',
+                    color: 'red',
+                    speed: 80,
+                    up: function () {
+                        return this.speed + 10;
+                    },
+                },
+                {
+                    name: 'Audi',
+                    color: 'White',
+                    speed: 140,
+                    up: function () {
+                        return this.speed + 10;
+                    },
+                },
+            ];
+
+            function displayCarinfo() {
+                let carInfo = document.getElementById('carInfo');
+                carInfo.textContent = '';
+
+                for (let i = 0; i < cars.length; i++) {
+                    let car = cars[i];
+
+                    let carName = document.createElement('p');
+                    carName.textContent = '자동차 이름 : ' + car.name;
+                    let carColor = document.createElement('p');
+                    carColor.textContent = '자동차 색상 : ' + car.color;
+                    let carSpeed = document.createElement('p');
+                    carSpeed.textContent = '자동차 속도 : ' + car.speed + 'km/h';
+
+                    let speedUpButton = document.createElement('button');
+                    speedUpButton.textContent = '속도 올려버리기 ~';
+
+                    speedUpButton.setAttribute('data-index', i);
+
+                    speedUpButton.onclick = function () {
+                        let index = this.getAttribute('data-index');
+                        cars[index].speedUp = function () {
+                            this.speed += 10;
+                        };
+                        cars[index].speedUp();
+                        displayCarinfo();
+                    };
+
+                    let separator = document.createElement('hr');
+
+                    carInfo.appendChild(carName);
+                    carInfo.appendChild(carColor);
+                    carInfo.appendChild(carSpeed);
+                    carInfo.appendChild(speedUpButton);
+                    carInfo.appendChild(separator);
+                }
+            }
+        </script>
+    </body>
+</html>

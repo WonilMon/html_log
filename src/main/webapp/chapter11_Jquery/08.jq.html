@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>08.jq</title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                $('button').click(function () {
+                    $('li:has(span)').text('오늘 점심메뉴 (우태형)');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li>외쳐 우태갓 1</li>
+            <li><span>외쳐 우태갓 2</span></li>
+            <li>외쳐 우태갓 3</li>
+        </ul>
+
+        <button>필터링</button>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>05.element</title>
+    </head>
+    <body>
+        <p [Hongs Car]></p>
+        <p id="carname1"></p>
+        <p id="carcolor1"></p>
+        <p id="carspeed1"></p>
+
+        <p [Kims Car]></p>
+        <p id="carname2"></p>
+        <p id="carcolor2"></p>
+        <p id="carspeed2"></p>
+
+        <script>
+            function Car(name, color, speed) {
+                this.name = name;
+                this.color = color;
+                this.speed = speed;
+                this.speedUp = function () {
+                    return this.speed + 20;
+                };
+                this.speedDown = function () {
+                    return this.speed - 20;
+                };
+            } //생성자 함수 정의
+
+            let hongCar = new Car('Sonata', 'blue', 100);
+            let kimCar = new Car('Jeep', 'red', 70);
+            //생성자 함수 통해 객체 생성
+
+            let cname1 = document.getElementById('carname1');
+            cname1.textContent = '자동차 이름' + hongCar.name;
+            let ccolor1 = document.getElementById('carcolor1');
+            ccolor1.textContent = '자동차 색상' + hongCar.color;
+            let cspeed1 = document.getElementById('carspeed1');
+            cspeed1.textContent = '속도 증가' + hongCar.speedUp;
+
+            let cname2 = document.getElementById('carname2');
+            cname2.textContent = '자동차 이름' + kimCar.name;
+            let ccolor2 = document.getElementById('carcolor2');
+            ccolor2.textContent = '자동차 색상' + kimCar.color;
+            let cspeed2 = document.getElementById('carspeed2');
+            cspeed2.textContent = '속도 증가' + kimCar.speedUp;
+        </script>
+    </body>
+</html>

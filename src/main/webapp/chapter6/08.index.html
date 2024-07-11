@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>08.index</title>
+        <style>
+            .box1 {
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+                /* step1. 박스들의 위치를 옮기기위해 absolute */
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                /* step2. 부모 기준에서 움직이죠 (이 경우 부모는 body) */
+                /* step3. 순서가 1-2-3이죠 현재는 */
+                /* step4. z-index:1; 를 통해 몇번째로 보낼거냐 설정 */
+                z-index: 3;
+            }
+            .box2 {
+                background-color: yellow;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                z-index: 1;
+            }
+            .box3 {
+                background-color: green;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 60px;
+                left: 60px;
+                z-index: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">box #1</div>
+        <div class="box2">box #2</div>
+        <div class="box3">box #3</div>
+    </body>
+</html>

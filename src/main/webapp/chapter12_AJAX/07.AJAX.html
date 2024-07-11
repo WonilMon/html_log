@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script src="../Java_Script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                let api = '075727d1159e057dcbf7c63b5f5e3dac';
+                let city = 'Seoul';
+                let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`;
+
+                $.ajax({
+                    url: apiUrl,
+                    type: 'get',
+                    success: function (wonil) {
+                        let tempIncelsius = wonil.main.temp;
+                        $('#result').html(`<h3> ${city}의 현재 온도는 화씨 ${tempIncelsius}C입니다.</h3>`);
+                        //백틱(`)안에 중괄호({})는 변수라는 뜻. 즉 스트링 형태로 바꿔주는 것
+                    },
+                    error: function (error) {},
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h2>날씨 API 데이터 가져오기</h2>
+        <div id="result"></div>
+    </body>
+</html>
+
+<!--
+https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+API key와 city name에 해당하는 값을 각각 수정해서 보내는 것 
+-->

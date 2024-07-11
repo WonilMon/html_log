@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>07.css_attr</title>
+<style>
+	h1[text] {color : red;background-color: gray;}
+	h1[text="red"] {color : red;background-color: gray;}
+	p[text~="aa"] {color: yellow; background-color: blue;}
+	p[text|="a1"] {color: yellow; background-color: blue;}
+	p[text^="img"] {color: yellow; background-color: blue;}
+	p[text$=".png"] {color: yellow; background-color: blue;}
+	p[text*="ong"] {color: yellow; background-color: blue;}
+
+
+</style>
+</head>
+<body>
+	<!--임의로 만든 text라는 태그-->
+	<h1 text>text 속성 이름 선택자</h1>
+	<p text>이건 text해도 안되죠</p>
+	<h1 text="red">text 속성과 속성값 선택자</h1>
+	<p text="aa bb cc">리스트 매칭 속성</p>
+	<p text="a1-a2-a3">범위 시작 텍스트 매칭 속성</p>
+	<p text="img/pic.jpg">텍스트 시작 매칭 속성</p>
+	<p text="img/pic.png">텍스트 끝 매칭 속성</p>
+	<p text="soldesk ong">텍스트 패턴 매칭 속성</p>
+	<!-- 거의안씀 -->
+</body>
+</html>

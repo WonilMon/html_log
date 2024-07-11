@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>08.type_var</title>
+</head>
+<body>
+    <script>
+        stdName = "홍길동";
+        comGrade = 96;
+
+        var stdName = "김유신"; /* 재선언 */
+        var comGrade;           /* 값 안넣었으면 값 나옴 */
+        /* 나중에 똑같은 이름으로 했다가 원하지 않는 결과물 도출 우려 */
+
+        let stdName = "손흥민";
+        let comGrade;
+        /* let은 같은 이름으로 재선언 자체가 불가 */
+
+        document.write("학생이름 : " + stdName + "<br>");
+        document.write("컴퓨터이름 : " + comGrade + "<br>")
+    </script>
+</body>
+</html>
+
